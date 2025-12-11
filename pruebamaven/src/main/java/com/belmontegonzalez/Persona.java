@@ -1,5 +1,8 @@
 package com.belmontegonzalez;
 
+/**
+ * La clase persona
+ */
 public class Persona {
     // Atributos
     private String nombre;
@@ -7,7 +10,15 @@ public class Persona {
     private int edad;
     private String email;
 
-    // Cosntructor
+    // Constructor
+    /**
+     * Constructor con parametros
+     * 
+     * @param nombre    - parametro nombre
+     * @param apellidos - parametro apellidos
+     * @param edad      - parametro edad
+     * @param email     - parametro email
+     */
     public Persona(String nombre, String apellidos, int edad, String email) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -16,6 +27,12 @@ public class Persona {
     }
 
     // Getters y setters
+
+    /**
+     * Getter de nombre
+     * 
+     * @return el nombre de la persona
+     */
     public String getNombre() {
         return nombre;
     }
