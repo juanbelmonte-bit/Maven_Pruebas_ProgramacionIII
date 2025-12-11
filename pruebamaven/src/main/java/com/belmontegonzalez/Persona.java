@@ -26,6 +26,24 @@ public class Persona {
         this.email = email;
     }
 
+    public static Persona factory(String cadena) {
+        if (cadena == null) {
+            throw new IllegalArgumentException("Argumentos invalidos");
+        }
+        String[] chunks = cadena.split(",");
+        if (chunks.length != 4) {
+            throw new IllegalArgumentException("Argumentos invalidos");
+        }
+
+        try {
+            int edad = Integer.parseInt(chunks[2]);
+            return new Persona(chunks[0], chunks[1], edad, chunks[3]);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Argumentos invalidos");
+        }
+
+    }
+
     // Getters y setters
 
     /**
